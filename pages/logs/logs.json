@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "证照识别",
+  "usingComponents": {
+    
+    "i-row": "../ui/row/index",
+    "i-col": "../ui/col/index",
+    "i-input": "../ui/input/index",
+    "i-panel": "../ui/panel/index",
+    "van-button":"../../dist/button/index"
+  }
+}

@@ -1,0 +1,39 @@
+<!--logs.wxml-->
+<i-input value="{{ list2.name }}" title="姓名" placeholder="请输入姓名" />
+  <i-input value="{{ list2.sex }}" title="性别" placeholder="请输入性别" />
+  <i-input value="{{ list2.issuePlace }}" title="签发地点" placeholder="请输入签发地址" />
+  <i-input value="{{ list2.passportNumber }}" title="护照号码" placeholder="请输入护照号码" />
+  <i-input value="{{ list2.issueDate }}" title="签发日期" placeholder="请输入签发日期" />
+  <i-input value="{{ list2.birthPlace }}" title="出生地点" placeholder="请输入出生地点" />
+  <i-input value="{{ list2.birthday }}" title="生日" placeholder="请输入您的生日" />
+  <i-input value="{{ list2.countryCode }}" title="国家码" placeholder="请输入国家码" />
+  <i-input value="{{ list2.valid }}" title="有效期" placeholder="请输入签证有效期" />
+  <i-input value="{{ list2.englishName }}" title="姓名拼音" placeholder="请输入姓名拼音" />
+
+
+<i-row>
+  <view class='col_d' style='padding-bottom:{{btuBottom}}'>
+    <i-col span="6" offset="2" i-class="col-class">
+      <van-button bind:click="goToMessage" type="success" class='ann'><text>返回</text></van-button>
+    </i-col>
+    <i-col span="6" offset="2" i-class="col-class">
+      <van-button bind:click="btn_idCard" type="success" class='ann'><text>护照</text></van-button>
+    </i-col>
+     
+     <i-col span="6"offset="2" i-class="col-class">
+      <van-button   bind:click="goToSaveMessage" type="success"><text>确定</text></van-button>
+    </i-col>
+  </view>
+</i-row>
+
+
+
+<i-panel title="" class="iptop">
+  <image  src='{{frontImage}}' class='img01' bindtap="btn_idCard"></image>
+</i-panel>
+
+
+
+  
+
+

@@ -1,0 +1,43 @@
+<!--pages/camera/camera.wxml-->
+<i-input value="{{ list.name }}" title="姓名" placeholder="请输入姓名" />
+<i-input value="{{ list.sex }}" title="性别" placeholder="请选择性别" />
+<i-input value="{{ list.address }}" title="住址" placeholder="请输入住址" />
+<i-input value="{{ list.nation }}" title="民族" placeholder="民族" />
+<i-input value="{{ list.idNo }}" title="身份号码" placeholder="请输入身份号码" />
+<i-input value="{{ list.birthday }}" title="出生日期" placeholder="请输入出生日期" />
+<i-input value="{{ list1.authority }}" title="派出所" placeholder="办理派出所" />
+<i-input value="{{ list1.startDate }}" title="办理时间" placeholder="身份证办理时间" />
+<i-input value="{{ list1.endDate }}" title="到期时间" placeholder="身份证到期时间" />
+<i-input value="{{ phone }}" title="手机" placeholder="请输入手机号" bindtap="getPhone" />
+
+<i-row>
+  <view class='col_d' style='padding-bottom:{{btuBottom}}'>
+    <i-col span="5"offset="1" i-class="col-class">
+      <van-button  bind:click="goTomessage" type="success" ><text>取消</text></van-button>
+    </i-col>
+    <i-col span="5" offset="1" i-class="col-class">
+      <van-button  bind:click="btn_idCard" type="success" ><text>正面</text></van-button>
+    </i-col>
+    <i-col span="5"offset="1" i-class="col-class">
+      <van-button  bind:click="btn_idCard2" type="success" ><text>反面</text></van-button>
+    </i-col>
+    <i-col span="5"offset="1" i-class="col-class">
+      <van-button  bind:click="goToLogs" type="success" ><text>确定</text></van-button>
+    </i-col>
+  </view>
+</i-row>
+
+
+<i-panel>
+  <image  src='{{frontImage}}' class="img01" bindtap="btn_idCard"></image>
+</i-panel>
+<i-panel>
+  <image  src='{{reverseImage}}' class='img02' bindtap="btn_idCard2"></image>
+</i-panel>
+
+
+
+
+
+
+

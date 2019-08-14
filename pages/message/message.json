@@ -1,0 +1,15 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "旅游订单",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+   
+    "i-row": "../ui/row/index",
+    "i-col": "../ui/col/index",
+    "i-input": "../ui/input/index",
+    "van-collapse": "../../dist/collapse/index",
+    "van-collapse-item": "../../dist/collapse-item/index"
+    
+  }
+}

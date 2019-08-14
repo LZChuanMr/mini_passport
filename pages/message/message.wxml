@@ -1,0 +1,80 @@
+<!--pages/message/message.wxml-->
+<!-- 顶部切换 -->
+<view class="swiper-tab">
+   <input placeholder='请输入团号（含英文）游客姓名手机号' bindinput="mohuSer"  class="inp_val" />
+   <button bindtap="gotoSer" class="inp_val_but">搜索</button> 
+  <block wx:for="{{swipertab}}" wx:key="sptab">
+    <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch" style='font-size: 16px;'>{{item.name}}</view>
+  </block>
+</view>
+
+<swiper current="{{currtab}}" class="swiper-box" duration="300" style="height:{{deviceH+1500}}px;" bindchange="tabChange">
+  <!-- 最新订单 -->
+  <swiper-item>
+    <scroll-view class="orderListTitle" scroll-y="true">
+      <view class='dd_con1 btw' wx:for="{{team}}" wx:key="*this">
+        <view >{{item.projectCode}}</view>
+        <view >{{item.createDate}}</view>
+        <view >{{item.projectCloseStatus==0?'未封团':'已封团'}}</view>
+        <view >{{item.visitorStatus}}</view>
+        <!-- 详情 -->
+        <view class="xq" bindtap="toCamera" wx:for="{{team[index].viws}}" wx:key="*this" wx:for-index="index" data-idcardid="{{item.idCardID}}" data-ordervisitorid="{{item.orderVisitorId}}" data-passportid="{{item.passportID}}">
+          <view class="element">
+            <view>姓名：{{item.visitorName}}</view>
+            <view>手机：{{item.mobilePhone}}</view>
+          </view>
+          <view class="element">
+            <view>护照：{{item.passport}}</view>
+            <view>身份证:{{item.idCard}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+   <!-- 证照不全 -->
+  <swiper-item>
+    <scroll-view class="orderListTitle" scroll-y="true">
+      <view class='dd_con1 btw' wx:for="{{team}}" wx:key="*this" >
+        <view >{{item.projectCode}}</view>
+        <view >{{item.createDate}}</view>
+        <view >{{item.projectCloseStatus==0?'未封团':'已封团'}}</view>
+        <view >{{item.visitorStatus}}</view>
+        <!-- 详情 -->
+        <view class="xq" scroll-y="true" bindtap="toCamera" wx:for="{{team[index].viws}}" wx:key="*this" wx:for-index="index" data-idcardid="{{item.idCardID}}" data-ordervisitorid="{{item.orderVisitorId}}" data-passportid="{{item.passportid}}">
+          <view class="element">
+            <view>姓名：{{item.visitorName}}</view>
+            <view>手机：{{item.mobilePhone}}</view>
+          </view>
+          <view class="element">
+            <view>护照：{{item.passport}}</view>
+            <view>身份证:{{item.idCard}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+ <!-- 没有证照 -->
+  <swiper-item>
+    <scroll-view class="orderListTitle" scroll-y="true" >
+      
+      <view class='dd_con1 btw' wx:for="{{team}}" wx:key="*this"  >
+        <view >{{item.projectCode}}</view>
+        <view >{{item.createDate}}</view>
+        <view >{{item.projectCloseStatus==0?'未封团':'已封团'}}</view>
+        <view >{{item.visitorStatus}}</view>
+        <!-- 详情 -->
+        <view class="xq" scroll-y="true"  bindtap="toCamera" wx:for="{{team[index].viws}}" wx:key="*this" wx:for-index="index" data-idcardid="{{item.idCardID}}" data-ordervisitorid="{{item.orderVisitorId}}" data-passportid="{{item.passportid}}">
+          <view class="element" >
+            <view>姓名：{{item.visitorName}}</view>
+            <view>手机：{{item.mobilePhone}}</view>
+          </view>
+          <view class="element">
+            <view>护照：{{item.passport}}</view>
+            <view>身份证:{{item.idCard}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

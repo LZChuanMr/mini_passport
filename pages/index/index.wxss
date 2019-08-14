@@ -1,0 +1,63 @@
+/**index.wxss**/
+.bg{
+  position: absolute;
+  width: 100%;
+  background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=311050704,3226129235&fm=26&gp=0.jpg);
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+}
+.img01{
+  width: 100%;
+  height: 320rpx;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: 10rpx;
+  top: 70rpx;
+}
+.changeInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.changeInfoName{
+  position: relative;
+  top: 80rpx;
+  height: 80rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  background: #fff;
+  margin-bottom: 80rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+}
+.codeBtn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #bbb;
+  width: 30%;
+  font-size: 24rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.changeInfoName input{
+  width: 100%;
+  height:100%;
+}
+.changeBtn{
+  width: 25%;
+  height: 70rpx;
+  background: #fff;
+  color: #333;
+  border-radius: 50rpx;
+  position: absolute;
+  bottom: 10%;
+  left: 38%;
+  line-height: 70rpx;
+  font-size: 30rpx;
+}

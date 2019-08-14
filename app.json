@@ -1,0 +1,17 @@
+{
+  "pages": [
+      "pages/message/message",
+    "pages/index/index",
+  
+    "pages/camera/camera",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "凤凰旅游",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+
+}

@@ -1,0 +1,13 @@
+.i-row:after {
+  content: "";
+  display: table;
+  clear: both;
+ 
+}
+.i-row{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+}
